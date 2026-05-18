@@ -22,7 +22,7 @@ app.use(express.json({ limit: "4mb" }));
 app.use(cors());
 
 // routes
-app.use("/api/status", (req, res) => res.send("Server is Live"));
+app.use("/", (req, res) => res.send("Server is Live"));
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
 
