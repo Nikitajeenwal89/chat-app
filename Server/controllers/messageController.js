@@ -6,7 +6,9 @@ import cloudinary from "../lib/cloudinary.js";
 
 //get all users expect the logges in user
 
+
 export const getUserForSidebar =async (req,res)=>{
+
     try{
         const userId =req.user._id
         const filteredUser =await User.find({_id:{$ne:userId}}).select("-password")
@@ -25,6 +27,7 @@ export const getUserForSidebar =async (req,res)=>{
    
 } catch(error){
     console.log(error.message);
+
     res.json({ success: false, message : error. message})
 
 }
@@ -50,6 +53,7 @@ export const getMessages = async(req,res)=>{
         
     }catch(error){
         console.log(error.message);
+    
         res.json({success: false,  message : error. message})
         
     }
@@ -91,6 +95,7 @@ export const sendMessage = async (req,res)=>{
     } catch(error){
 
         console.log(error.message);
+    
         res.json({success: false , message : error.message})
 
     }

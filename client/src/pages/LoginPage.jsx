@@ -4,6 +4,8 @@ import { useContext } from 'react'
 import { AuthContext } from '../../context/AuthContext'
 
 export const LoginPage = () => {
+
+
   const {authUser,updateProfile}= useContext(AuthContext)
    const [currState,setCurrState] =useState("sign up")
    const[fullName,setFullName]=useState("")
