@@ -19,15 +19,15 @@ initSocket(server);
 
 // middleware
 app.use(express.json({ limit: "4mb" }));
-app.use(cors({   
-
-
-   origin: [
-    "http://localhost:5173",
-    "https://chat-myol28jir-nikitajeenwal89s-projects.vercel.app"
-  ],
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
+
+
+
 
 
 
