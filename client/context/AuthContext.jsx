@@ -96,11 +96,26 @@ export const AuthProvider =({children})=>{
                 }
              })
              newSocket.connect();
-             setSocket(newSocket);
 
-             newSocket.on('getOnlineUsers',(userIds)=>{
-                setOnlineUsers(userIds);
-             })
+
+
+
+
+
+ newSocket.on("connect",()=>{
+       console.log("Socket Connected:", newSocket.id)
+    })
+
+    setSocket(newSocket);
+
+    newSocket.on('getOnlineUsers',(userIds)=>{
+        setOnlineUsers(userIds);
+    })
+
+
+
+
+
         }
 
 

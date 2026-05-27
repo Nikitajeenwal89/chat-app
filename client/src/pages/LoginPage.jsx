@@ -12,12 +12,12 @@ export const LoginPage = () => {
    const[email,setEmail]=useState("") 
    const[password,setPassword]=useState("")
    const[bio,setBio]=useState("")
-   const[isDataSubmitted,setIsDataSubmitted]=useState(false);
+   const[isDataSubmitted,setIsDataSubmitted]=useState(false);  
 
      const {login} = useContext(AuthContext)
 
     const onSubmitHandler =(event)=>{
-      event.preventDefault();
+      event.preventDefault(); 
     
 
  if(currState === 'sign up' && !isDataSubmitted){

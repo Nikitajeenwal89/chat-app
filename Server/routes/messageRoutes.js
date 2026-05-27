@@ -11,4 +11,4 @@ const messageRouter = express.Router();
    messageRouter.put("/mark/:id", protectRoute, markMessageAsSeen)
    messageRouter.post("/send/:id", protectRoute,sendMessage)
 
-   export default messageRouter;
+   export default messageRouter; 

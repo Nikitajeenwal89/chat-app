@@ -11,7 +11,7 @@ export const ProfilePage = () => {
   const[name,setName]=useState(authUser.fullName)
   const[bio,setBio]=useState(authUser.bio)
 
-  const handlesubmit =async (e)=>{
+  const handlesubmit =async (e)=>{ 
     e.preventDefault();
     if(!selectedImg){
       await updateProfile({fullName:name,bio})

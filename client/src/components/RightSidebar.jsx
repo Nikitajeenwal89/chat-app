@@ -7,9 +7,9 @@ const RightSidebar = () => {
 
   const {selectedUser,messages} = useContext(ChatContext)
   const{logout, onlineUsers} = useContext (AuthContext)
-  const [msgImages,setMessages] = useState([])
+  const [msgImages,setMessages] = useState([]) 
 
-  //get all the images from the messages and set them state
+  //get all the images from the messages and set them state 
     useEffect(()=>{
       setMessages(
         messages.filter(msg=>msg.image).map(msg=>msg.image)

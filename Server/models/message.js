@@ -11,4 +11,4 @@ import mongoose   from "mongoose";
 
   
 const message = mongoose.model("message",messageSchema);
-export default message;
+export default message; 

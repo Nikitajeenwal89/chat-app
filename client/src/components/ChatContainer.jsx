@@ -120,7 +120,7 @@ return selectedUser ?(
 )
 
 }
-  export default ChatContainer
+  export default ChatContainer;
 
 
 
