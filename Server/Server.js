@@ -19,7 +19,17 @@ initSocket(server);
 
 // middleware
 app.use(express.json({ limit: "4mb" }));
-app.use(cors());
+app.use(cors({   
+
+
+   origin: [
+    "http://localhost:5173",
+    "https://chat-myol28jir-nikitajeenwal89s-projects.vercel.app"
+  ],
+  credentials: true
+}));
+
+
 
 // routes
 app.use("/", (req, res) => res.send("Server is Live"));
