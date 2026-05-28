@@ -32,7 +32,7 @@ app.use(cors({
 
 
 // routes
-app.use("/", (req, res) => res.send("Server is Live"));
+//pp.use("/", (req, res) => res.send("Server is Live"));
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
 
